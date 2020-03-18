@@ -1,0 +1,101 @@
+.footer {
+    @include background(url("../img/footer/bg.png"), bottom, left, 19.44%, $brown_0);
+
+    &__inner {
+        @extend %center_block;
+
+        display: flex;
+        justify-content: space-between;
+        padding: 3.82% 0 3.82% 20.8%;
+        
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        width: 48.96%;
+
+        &_item {
+            width: 140px;
+            margin-bottom: 45px;
+            text-align: left;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &_title {
+            @include font(24px, 24px, "MinionPro-Semibold");
+
+            color: $white_1;
+        }
+
+        &_link {
+            @include font(12px, 20px, "Montserrat-Regular");
+
+            display: inline-block;
+            color: $white_1;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 17.19%;
+
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_item {
+            position: relative;
+            width: 36.36%;
+            padding-bottom: 36.36%;
+        }
+
+        &_link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $white_1;
+            border-radius: 50%;
+        }
+
+        &_svg {
+            width: 13px;
+            height: 13px;
+            fill: $white_1;
+        }
+    }
+
+    &__copyright {
+
+        &_description {
+            @include font(11px, 18px, "Montserrat-Regular");
+
+            display: inline-block;
+            margin-right: 10px;
+            color: $white_1;
+        }
+    }
+
+    &__logo {
+
+        &_link {
+            display: inline-block;
+        }
+
+        &_svg {
+            fill: $white_1;
+        }
+    }
+}
