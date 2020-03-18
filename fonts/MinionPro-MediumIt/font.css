@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'MinionPro-MediumIt';
+  src: url('MinionPro-MediumIt.eot');
+  src: url('MinionPro-MediumIt.eot?#iefix') format('embedded-opentype'),
+       url('MinionPro-MediumIt.ttf') format('truetype'),
+       url('MinionPro-MediumIt.woff') format('woff'),
+       url('MinionPro-MediumIt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -4,3 +4,10 @@
 @import "mixins.scss";
 @import "reset.scss";
 @import "header.scss";
+
+// HEADER
+@import "general/header/header";
+// NAV
+@import "general/nav/nav";
+// MAIN
+@import "general/main/main";

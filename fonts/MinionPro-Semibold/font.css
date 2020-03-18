@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'MinionPro-Semibold';
+  src: url('MinionPro-Semibold.eot');
+  src: url('MinionPro-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('MinionPro-Semibold.ttf') format('truetype'),
+       url('MinionPro-Semibold.woff') format('woff'),
+       url('MinionPro-Semibold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

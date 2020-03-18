@@ -1,0 +1,43 @@
+.header {
+    background-color: $white_1;
+
+    &__inner {
+        @extend %center_block;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+    }
+
+    &__logo {
+
+        &_link {
+            max-width: 153px;
+        }
+    }
+
+    &__social {
+
+        &_list {
+            font-size: 0;
+        }
+
+        &_item {
+            display: inline-block;
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &_link {
+            width: 17px;
+        }
+
+        &_svg {
+            fill: $brown_0;
+        }
+    }
+}
