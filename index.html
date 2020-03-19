@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 	<meta name="author" content="Mango Web Studio">
+	<!-- Slick -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
   
@@ -85,7 +89,83 @@
 	<!-- MAIN -->
 	<main class="main" id="main">
 		<div class="home" id="home">
+			<!-- Banner -->
+			<div class="home__banner">
+				<div class="home__banner_fixed">
+					<p class="home__banner_title">
+						Простір твоєї <br>
+						краси
+					</p>
+					<div class="home__banner_language">
+						<ul class="home__banner_language_list">
+							<li class="home__banner_language_item">
+								<a href="#" class="home__banner_language_link">
+									РУС
+								</a>
+							</li>
+							<li class="home__banner_language_item">
+								<a href="#" class="home__banner_language_link home__banner_language_link--active">
+									УКР
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="home__slider">
+					<div class="home__slider_arrows">
+						<div class="home__slider_arrow home__slider_arrow--prev">
+							<svg class="home__slider_arrow_svg" width="9" height="7" viewBox="0 0 9 7" xmlns="http://www.w3.org/2000/svg">
+								<rect width="8" height="1" transform="matrix(-1 0 0 1 8.98535 3)" />
+								<path d="M4.94971 0.00709438L4.94261 0H3.54259L-4.02927e-05 3.54263L3.45733 7H4.87154L1.41417 3.54263L4.94971 0.00709438Z" />
+							</svg>
+						</div>
+						<div class="home__slider_arrow home__slider_arrow--next">
+							<svg class="home__slider_arrow_svg" width="9" height="7" viewBox="0 0 9 7" xmlns="http://www.w3.org/2000/svg">
+								<rect y="3" width="8" height="1" />
+								<path d="M4.03564 0.00709456L4.04274 0H5.44276L8.98539 3.54263L5.52802 7H4.11381L7.57118 3.54263L4.03564 0.00709456Z" />
+							</svg>
+						</div>
+					</div>
+					<div class="home__slider_list">
+						<div class="home__slider_item">
+							<div class="home__slider_photo">
+								<img src="img/home/slider/1.png" alt="" class="home__slider_img">
+							</div>
+							<div class="home__slider_description">
+								<p class="home__slider_paragraph">
+									Краса та здоров'я мають іти рука об руку.
+									<br>
+									<br>
+									<br>
+									Позбавтеся від повсякденної зайнятої реальності і інтенсивно доглядайте за своєю шкірою. Краса і здоров'я йдуть рука об руку.
+								</p>
+							</div>
+						</div>
+						<div class="home__slider_item">
+							<div class="home__slider_photo">
+								<img src="img/home/slider/2.png" alt="" class="home__slider_img">
+							</div>
+							<div class="home__slider_description">
+								<p class="home__slider_paragraph">
+									Краса та здоров'я мають іти рука об руку.
+									<br>
+									<br>
+									<br>
+									Позбавтеся від повсякденної зайнятої реальності і інтенсивно доглядайте за своєю шкірою. Краса і здоров'я йдуть рука об руку.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="home__section_one">
+				<div class="home__section_one_inner">
+					
+				</div>
+			</section>
+			<section class="home__section_two">
 
+			</section>
 		</div>
 	</main>
 	<!-- FOOTER -->
@@ -148,5 +228,12 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- jQuery -->
+	<script src="js/lib/jquery-3.4.1.min.js"></script>
+	<!-- Slick -->
+	<script src="slick/slick.min.js"></script>
+	<!-- Main script -->
+	<script src="js/main.js"></script>
 </body>
 </html>

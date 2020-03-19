@@ -1,6 +1,8 @@
 .footer {
     @include background(url("../img/footer/bg.png"), bottom, left, 19.44%, $brown_0);
 
+    padding: $main_padding;
+
     &__inner {
         @extend %center_block;
 
