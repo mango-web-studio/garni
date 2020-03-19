@@ -1,5 +1,8 @@
 .header {
+    position: sticky;
+    top: 0;
     background-color: $white_1;
+    z-index: 9;
 
     &__inner {
         @extend %center_block;

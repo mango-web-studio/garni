@@ -13,7 +13,6 @@
     &__contacts {
         display: flex;
         justify-content: space-between;
-        width: 48.96%;
 
         &_item {
             width: 140px;
@@ -28,6 +27,7 @@
         &_title {
             @include font(24px, 24px, "MinionPro-Semibold");
 
+            margin-right: 85px;
             color: $white_1;
         }
 
@@ -43,7 +43,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 17.19%;
 
         &_list {
             display: flex;
