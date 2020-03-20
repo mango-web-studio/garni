@@ -1,0 +1,32 @@
+.slider {
+
+    &_arrows {
+        display: flex;
+        height: 40px;
+
+        .slick-disabled {
+            // border-color: rgba(255, 255, 255, 0.5);
+            cursor: default;
+        }
+    }
+
+    &_arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        // border:  1px solid $white_0;
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: all;
+
+        &--prev {
+            margin-right: 15px;
+        }
+
+        &_svg {
+            width: 10px;
+        }
+    }
+}

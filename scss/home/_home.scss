@@ -116,6 +116,7 @@
 
             width: 195px;
             max-height: 250px;
+            margin-bottom: 45px;
             color: $white_2;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -131,34 +132,265 @@
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            max-width: $site_width;
-            height: 40px;
+            max-width: 1260px;
             z-index: 1;
-            
-            .slick-disabled {
-                border-color: rgba(255, 255, 255, 0.5);
-                cursor: default;
+            pointer-events: none;
+        }
+
+        .slider_arrow {
+            border:  1px solid $white_0;
+
+            &_svg {
+                fill: $white_0;
             }
         }
 
-        &_arrow {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border:  1px solid $white_0;
-            border-radius: 50%;
-            cursor: pointer;
+        .slick-disabled {
+            border-color: $white_3;
+        }
+    }
 
-            &--next {
-                left: 55px;
+    &__moments {
+        padding: $main_padding;
+        background-color: $white_2;
+
+        &_inner {
+            @extend %center_block;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 5.56% 0;
+        }
+
+        &_photo {
+            position: relative;
+            width: 40.87%;
+            padding-bottom: 48.81%;
+        }
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_article {
+            width: 50.8%;
+        }
+
+        &_title {
+            @include font(36px, 42px, "MinionPro-Semibold");
+
+            margin-bottom: 35px;
+            color: $brown_0;
+
+            &--italic {
+                font-family: "MinionPro-BoldCnIt";
+            }
+        }
+
+        &_description {
+            display: flex;
+
+            &_left {
+                width: 50%;
+            }
+            
+            &_right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                width: 50%;
             }
 
-            &_svg {
-                width: 10px;
-                fill: $white_0;
+            &_photo {
+                position: relative;
+                width: 67.19%;
+                padding-bottom: 84.38%;
+
+                &--translateY {
+                    transform: translateY(65%);
+                }
+            }
+
+            &_img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &_paragraph {
+            @include font(12px, 20px, "Montserrat-Regular");
+
+            width: 67.19%;
+            margin-bottom: 45px;
+            color: $gray_0;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &--mt {
+                margin-top: 35px;
+            }
+        }
+    }
+
+    &__services {
+        padding-left: 15px;
+        
+        &_inner {
+            display: flex;
+            width: 94.8%;
+            padding: 20% 0 14.04%;
+            margin-left: auto;
+        }
+
+        &_title {
+            width: 20%;
+
+            &_text {
+                @include font(96px, 96px, "MinionPro-Regular");
+
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                color: $creamy_0;
+            }
+        }
+
+        &_slider {
+            width: 80%;
+            overflow: hidden;
+
+            .slider_arrow {
+                border:  1px solid $brown_2;
+    
+                &_svg {
+                    fill: $brown_1;
+                }
+            }
+    
+            .slick-disabled {
+                border-color: $brown_3;
+            }
+        }
+
+        &_list {
+            margin: 0 -10px 5.7%;
+        }
+
+        &_item {
+            margin: 0 10px;
+        }
+    }
+
+    &__beauty {
+        padding: $main_padding;
+        background-color: $white_2;
+
+        &_inner {
+            @extend %center_block;
+
+            position: relative;
+            padding: 2.48% 0 4.61%;
+        }
+
+        &_photo {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32.14%;
+            padding-bottom: 44.05%;
+        }
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_article {
+            position: relative;
+            z-index: 1;
+        }
+
+        &_title {
+            @include font(36px, 46px, "MinionPro-Semibold");
+
+            margin-bottom: 35px;
+            padding-left: 7.94%;
+            color: $brown_0;
+
+            &--italic {
+                font-family: "MinionPro-BoldCnIt";
+            }
+        }
+
+        &_description {
+            display: flex;
+            min-height: 455px;
+
+            &_left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 50%;
+
+                .home__beauty_description_paragraph {
+                    margin-left: 15.87%;
+                }
+
+                .home__beauty_description_photo {
+                    align-self: flex-end;
+                    margin-right: 18%;
+                }
+            }
+
+            &_right {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                width: 50%;
+
+                .home__beauty_description_photo {
+                    transform: translateY(-50px);
+                }
+            }
+
+            &_paragraph {
+                @include font(12px, 20px, "Montserrat-Regular");
+
+                max-width: 300px;
+                color: $gray_0;    
+            }
+
+            &_photo {
+                position: relative;
+                width: 30.95%;
+                padding-bottom: 37.3%;
+            }
+
+            &_img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
