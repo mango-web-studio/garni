@@ -39,7 +39,7 @@ $(document).ready(function() {
             }
         })
 
-        // Banner slider
+        // Banner section slider
         if ($('.home__slider_list')) {
             $('.home__slider_list').slick({
                 infinite: false,
@@ -63,7 +63,7 @@ $(document).ready(function() {
             });
         }
 
-        // Banner slider
+        // Beauty section slider
         if ($('.home__services_list')) {
             $('.home__services_list').slick({
                 infinite: false,
@@ -71,6 +71,29 @@ $(document).ready(function() {
                 slidesToScroll: 1,
                 prevArrow: $('.home__services_slider_arrow--prev'),
                 nextArrow: $('.home__services_slider_arrow--next'),
+                // autoplay: true,
+                speed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            autoplay: true,
+                            infinite: true
+                        }
+                    },
+                ]
+            });
+        }
+
+        // News section slider
+        if ($('.home__news_list')) {
+            $('.home__news_list').slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: $('.home__news_slider_arrow--prev'),
+                nextArrow: $('.home__news_slider_arrow--next'),
                 // autoplay: true,
                 speed: 1000,
                 responsive: [

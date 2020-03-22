@@ -261,7 +261,7 @@
             &_text {
                 @include font(96px, 96px, "MinionPro-Regular");
 
-                writing-mode: vertical-lr;
+                writing-mode: vertical-rl;
                 transform: rotate(180deg);
                 color: $creamy_0;
             }
@@ -391,6 +391,105 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+    }
+
+    &__news {
+        padding-right: 15px;
+        
+        &_inner {
+            @include background(url("../img/home/news/bg.png"), 74%, 20%, 20%);
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 94.8%;
+            padding: 17.2% 0 10.88%;
+        }
+
+        &_title {
+            width: 20%;
+
+            &_text {
+                @include font(96px, 96px, "MinionPro-Regular");
+
+                writing-mode: vertical-rl;
+                margin-left: auto;
+                color: $creamy_0;
+            }
+        }
+
+        &_slider {
+            width: 68.9%;
+            overflow: hidden;
+
+            &_arrows {
+                margin-bottom: 5.37%;
+
+                .slider_arrows {
+                    justify-content: flex-end;
+                }
+            }
+
+            .slider_arrow {
+                border:  1px solid $brown_2;
+    
+                &_svg {
+                    fill: $brown_1;
+                }
+            }
+    
+            .slick-disabled {
+                border-color: $brown_3;
+            }
+        }
+
+        &_list {
+            margin: 0 -10px 5.37%;
+        }
+
+        &_item {
+            margin: 0 10px;
+        }
+
+        &_link {
+            position: relative;
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_description {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-left: 9.68%;
+
+            &_paragraph {
+                @include font(12px, 20px, "Montserrat-Regular");
+
+                width: 300px;
+                color: $gray_0;
+            }
+
+            &_link {
+                @include font(11px, 20px, "Montserrat-SemiBold");
+
+                display: inline-block;
+                padding: 23px 55px;
+                border: 1px solid $brown_0;
+                border-radius: 100px;
+                color: $brown_0;
+                text-transform: uppercase;
             }
         }
     }
