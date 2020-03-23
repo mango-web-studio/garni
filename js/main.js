@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // HOME
-    if ($('#home')) {
+    if ($('#home').length) {
         // Header style befor scrolling
         const headerBefore = {
             "position": "fixed",

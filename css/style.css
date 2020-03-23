@@ -66,7 +66,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 body {
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
   -ms-overflow-style: none;
-  background-color: #fff; }
+  background-color: #FAF8F4; }
   body::-webkit-scrollbar {
     display: none; }
 
@@ -402,6 +402,58 @@ textarea {
       border-radius: 100px;
       color: #382E2B;
       text-transform: uppercase; }
+
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%; }
+  .form__input {
+    font: 1.2rem/2rem "Montserrat-Regular";
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid rgba(56, 46, 43, 0.5);
+    margin-bottom: 50px;
+    background-color: transparent;
+    color: #382E2B; }
+    .form__input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .form__input:focus::-moz-placeholder {
+      color: transparent; }
+    .form__input:focus:-ms-input-placeholder {
+      color: transparent; }
+    .form__input:focus::-ms-input-placeholder {
+      color: transparent; }
+    .form__input:focus::placeholder {
+      color: transparent; }
+    .form__input:-webkit-autofill, .form__input:-webkit-autofill:hover, .form__input:-webkit-autofill:focus {
+      -webkit-text-fill-color: #382E2B;
+      -webkit-box-shadow: 0 0 0px 1000px #F5F1E9 inset;
+              box-shadow: 0 0 0px 1000px #F5F1E9 inset; }
+  .form__submit {
+    font: 1.1rem/1.8rem "Montserrat-SemiBold";
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    width: 100%;
+    max-width: 220px;
+    padding: 25px;
+    border: 1px solid #382E2B;
+    border-radius: 100px;
+    background-color: transparent;
+    color: #382E2B;
+    text-transform: uppercase;
+    cursor: pointer; }
 
 .home__banner {
   position: relative;
@@ -852,5 +904,130 @@ textarea {
     display: grid;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
     grid-gap: 20px; }
+
+.contacts__form {
+  position: relative;
+  padding-left: 15px;
+  background-color: #F5F1E9; }
+  .contacts__form::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 14.04%;
+    background-color: #FAF8F4; }
+  .contacts__form_inner {
+    background-image: url("../img/contacts/bg.png");
+    background-position: 66% 95%;
+    background-size: 20%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 94.8%;
+    padding: 8.15% 0 10.18%;
+    margin-left: auto;
+    z-index: 1; }
+  .contacts__form_title_text {
+    font: 9.6rem/9.6rem "MinionPro-Regular";
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    color: #EDDFC9; }
+  .contacts__form_wrap {
+    width: 100%;
+    max-width: 400px; }
+  .contacts__form_photo {
+    position: relative;
+    width: 37.04%;
+    padding-bottom: 33.33%; }
+  .contacts__form_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.contacts__description {
+  padding-right: 15px; }
+  .contacts__description_inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15.09% 0 12.63%; }
+
+.contacts__map {
+  position: relative;
+  width: 35.09%;
+  padding-bottom: 33.33%; }
+  .contacts__map_iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.contacts__address {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 8.77%; }
+  .contacts__address_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .contacts__address_item {
+    margin-right: 13.33%; }
+    .contacts__address_item:last-child {
+      margin-right: 0; }
+  .contacts__address_title {
+    font: 1.2rem/2rem "Montserrat-SemiBold";
+    margin-bottom: 40px;
+    color: #382E2B;
+    text-transform: uppercase; }
+  .contacts__address_paragraph {
+    font: 1.2rem/2rem "Montserrat-Regular";
+    color: #382E2B; }
+  .contacts__address_link {
+    font: 1.2rem/2rem "Montserrat-Regular";
+    display: inline-block;
+    color: #382E2B; }
+    .contacts__address_link--phone {
+      font: 9.6rem/9.6rem "MinionPro-Regular";
+      border-bottom: 1px solid #382E2B;
+      white-space: nowrap; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+// <form action="" method="POST" class="form" id="form">
+//     <input class="form__input" type="text" name="name" id="name" placeholder="Ваше ім’я">
+//     <input class="form__input" type="tel" name="phone" id="phone" placeholder="Номер телефону">
+//     <button class="form__submit" type="submit">
+//         ПЕРЕДЗВОНИТИ
+//     </button>
+// </form>
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    &__input {
+        @include font(12px, 20px, "Montserrat-Regular");
+
+        padding: 10px;
+        border: 0;
+        border-bottom: 1px solid $brown_3;
+        margin-bottom: 50px;
+        background-color: transparent;
+        color: $brown_0;
+
+        &:focus {
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+            -webkit-text-fill-color: $brown_0;
+            box-shadow: 0 0 0px 1000px $white_2 inset;
+        }
+    }
+
+    &__submit {
+        @include font(11px, 18px, "Montserrat-SemiBold");
+
+        align-self: center;
+        width: 100%;
+        max-width: 220px;
+        padding: 25px;
+        border: 1px solid $brown_0;
+        border-radius: 100px;
+        background-color: transparent;
+        color: $brown_0;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
