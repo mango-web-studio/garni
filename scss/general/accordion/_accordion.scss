@@ -1,0 +1,162 @@
+// <div class="accordion" id="accordion">
+//     <ul class="accordion__list">
+//         <li class="accordion__item">
+//             <div class="accordion__description">
+//                 <p class="accordion__title">
+
+//                 </p>
+//                 <p class="accordion__paragraph">
+
+//                 </p>
+//                 <div class="accordion__btn">
+//                     +
+//                 </div>
+//             </div>
+//             <div class="accordion__price">
+//                 <div class="accordion__price_inner">
+//                     <ul class="accordion__price_list">
+//                         <li class="accordion__price_item">
+//                             <p class="accordion__price_title">
+
+//                             </p>
+//                             <p class="accordion__price_cost">
+
+//                             </p>
+//                         </li>
+//                         <li class="accordion__price_item">
+//                             <p class="accordion__price_title">
+
+//                             </p>
+//                             <p class="accordion__price_cost">
+
+//                             </p>
+//                         </li>
+//                         <li class="accordion__price_item">
+//                             <p class="accordion__price_title">
+
+//                             </p>
+//                             <p class="accordion__price_cost">
+
+//                             </p>
+//                         </li>
+//                         <li class="accordion__price_item">
+//                             <p class="accordion__price_title">
+
+//                             </p>
+//                             <p class="accordion__price_cost">
+
+//                             </p>
+//                         </li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </li>
+//     </ul>
+// </div>
+
+.accordion {
+
+    &__list {
+        counter-reset: accordion-item;
+    }
+
+    &__item {
+        padding: 3.57% 12px;
+        border-bottom: 1px solid $brown_3;
+        counter-increment: accordion-item;
+
+        &:first-child {
+            border-top: 1px solid $brown_3;
+        }
+
+        &.active {
+
+            .accordion__btn {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    &__title {
+        @include font(36px, 36px, "MinionPro-Semibold");
+
+        padding-left: 90px;
+        color: $brown_0;
+    }
+
+    &__description {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(400px, 40.45%) minmax(400px, 32.77%) 40px;
+        justify-content: space-between;
+        align-items: center;
+
+        &::before {
+            @include font(18px, 18px, "MinionPro-Semibold");
+
+            content: "0" counter(accordion-item);
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $brown_0;
+            opacity: 0.2;
+        }
+    }
+
+    &__paragraph {
+        @include font(12px, 20px, "Montserrat-Regular");
+
+        min-width: 400px;
+        color: $gray_0;
+    }
+
+    &__price {
+        display: none;
+        margin-top: 55px;
+
+        &_inner {
+            display: grid;
+            grid-template-columns: 40.45% 32.77% 40px;
+            justify-content: space-between;
+        }
+
+        &_list {
+            grid-column: 2/3;
+        }
+
+        &_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        &_title {
+            @include font(12px, 20px, "MinionPro-Semibold");
+
+            color: $brown_0;
+            text-transform: uppercase;
+        }
+
+        &_cost {
+            @include font(12px, 20px, "MinionPro-Semibold");
+
+            color: $brown_0;
+            text-transform: uppercase;
+        }
+    }
+
+    &__btn {
+        @include font(18px, 38px, "Montserrat-SemiBold");
+
+        text-align: center;
+        width: 40px;
+        border: 1px solid $brown_0;
+        border-radius: 50%;
+        color: $brown_0;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 0.4s ease-in-out;
+    }
+}

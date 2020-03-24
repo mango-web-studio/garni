@@ -110,6 +110,48 @@ $(document).ready(function() {
         }
     }
 
+    // SALT ROOM
+    if ($('#salt_room').length) {
+        
+        // Page top slider
+        if ($('.slider__list').length) {
+            $('.slider__list').slick({
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: $('.salt_room__slider_arrow--prev'),
+                nextArrow: $('.salt_room__slider_arrow--next'),
+                // autoplay: true,
+                fade: true,
+                centerMode: true,
+                speed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            autoplay: true,
+                            infinite: true
+                        }
+                    },
+                ]
+            });
+        }
+    }
+
+    // Accordion
+    if ($('#accordion').length) {
+
+        $('#accordion').click(function(e) {
+            
+            if ($(e.target).hasClass('accordion__btn')) {
+                $(e.target).closest('.accordion__item').toggleClass('active');
+                // $(e.target).toggleClass('active');
+                $(e.target).closest('.accordion__item').find('.accordion__price').slideToggle();
+            }
+        });
+    }
+
     // ABOUT
     if ($('#about').length) {
         
