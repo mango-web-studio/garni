@@ -1,0 +1,115 @@
+// <div class="slider">
+//     <div class="slider__list">
+//         <div class="slider__item">
+//             <div class="slider__slide">
+//                 <div class="slider__photo slider__photo--small">
+//                     <img src="" alt="" class="slider__img">
+//                 </div>
+//                 <div class="slider__photo slider__photo--normal">
+//                     <img src="" alt="" class="slider__img">
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="slider__description">
+//     <div class="slider__description_photo">
+//         <img src="" alt="" class="slider__description_img">
+//     </div>
+//     <p class="slider__description_title">
+
+//     </p>
+//     <p class="slider__description_paragraph">
+
+//     </p>
+//     <a href="3" class="slider__description_link">
+//         ЗАПИСАТИСЬ
+//     </a>
+// </div>
+
+.slider {
+    display: inline-block;
+    width: 100%;
+
+    &__item {
+        font-size: 0;
+    }
+
+    &__photo {
+        display: inline-block;
+
+        &--small {
+            position: relative;
+            transform: translateY(-20%);
+            width: 48.44%;
+            padding-bottom: 46.87%;
+            z-index: 1;
+        }
+
+        &--normal {
+            position: relative;
+            width: 65.63%;
+            padding-bottom: 78.13%;
+            margin-left: -14.5%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+
+        &_photo {
+            position: relative;
+            height: 0;
+            width: 33.72%;
+            padding-bottom: 41.86%;
+            margin-bottom: 15.12%;
+        }
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_title {
+            @include font(72px, 72px, "MinionPro-Regular");
+
+            margin-bottom: 8.14%;
+            color: $brown_0;
+        }
+
+        &_paragraph {
+            @include font(12px, 20px, "Montserrat-Regular");
+
+            max-width: 200px;
+            margin-bottom: 20.93%;
+            color: $gray_0;
+        }
+
+        &_link {
+            @include font(11px, 18px, "Montserrat-SemiBold");
+
+            width: 200px;
+            padding: 25px;
+            border: 1px solid $brown_0;
+            border-radius: 100px;
+            color: $brown_0;
+            text-align: center;
+        }
+    }
+}

@@ -40,7 +40,7 @@ $(document).ready(function() {
         })
 
         // Banner section slider
-        if ($('.home__slider_list')) {
+        if ($('.home__slider_list').length) {
             $('.home__slider_list').slick({
                 infinite: false,
                 slidesToShow: 1,
@@ -64,7 +64,7 @@ $(document).ready(function() {
         }
 
         // Beauty section slider
-        if ($('.home__services_list')) {
+        if ($('.home__services_list').length) {
             $('.home__services_list').slick({
                 infinite: false,
                 slidesToShow: 3,
@@ -87,7 +87,7 @@ $(document).ready(function() {
         }
 
         // News section slider
-        if ($('.home__news_list')) {
+        if ($('.home__news_list').length) {
             $('.home__news_list').slick({
                 infinite: false,
                 slidesToShow: 3,
@@ -95,6 +95,35 @@ $(document).ready(function() {
                 prevArrow: $('.home__news_slider_arrow--prev'),
                 nextArrow: $('.home__news_slider_arrow--next'),
                 // autoplay: true,
+                speed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            autoplay: true,
+                            infinite: true
+                        }
+                    },
+                ]
+            });
+        }
+    }
+
+    // ABOUT
+    if ($('#about').length) {
+        
+        // Page top slider
+        if ($('.slider__list').length) {
+            $('.slider__list').slick({
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: $('.about__slider_arrow--prev'),
+                nextArrow: $('.about__slider_arrow--next'),
+                // autoplay: true,
+                fade: true,
+                centerMode: true,
                 speed: 1000,
                 responsive: [
                     {
