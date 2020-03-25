@@ -1,0 +1,50 @@
+.specific_service {
+
+    &__slider {
+        background-color: $white_2;
+
+        &_inner {
+            @extend %center_block;
+
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 4.86% 0 13.89% 7.64%;
+            z-index: 1;
+
+            .slider {
+                width: 50.8%;
+                align-self: flex-end;
+            }
+        }
+
+        &_arrows {
+            position: absolute;
+            left: -17%;
+            bottom: 0;
+
+            .slider_arrow {
+                border: 1px solid $brown_0;
+
+                &_svg {
+                    color: $brown_1;
+                }
+            }
+
+            .slick-disabled {
+                border: 1px solid $brown_3;
+            }
+        }
+    }
+
+    &__services {
+        padding: $main_padding;
+        background-color: $white_4;
+
+        &_inner {
+            @extend %center_block;
+
+            padding: 7.09% 0 10.64%;
+        }
+    }
+}

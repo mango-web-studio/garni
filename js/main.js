@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+    // Accordion module
+    if ($('#accordion').length) {
+
+        $('#accordion').click(function(e) {
+
+            if ($(e.target).hasClass('accordion__btn')) {
+                $(e.target).closest('.accordion__item').toggleClass('active');
+                $(e.target).closest('.accordion__item').find('.accordion__price').slideToggle();
+            }
+        });
+    }
+
     // HOME
     if ($('#home').length) {
         // Header style befor scrolling
@@ -112,7 +124,7 @@ $(document).ready(function() {
 
     // SALT ROOM
     if ($('#salt_room').length) {
-        
+
         // Page top slider
         if ($('.slider__list').length) {
             $('.slider__list').slick({
@@ -139,22 +151,38 @@ $(document).ready(function() {
         }
     }
 
-    // Accordion
-    if ($('#accordion').length) {
+    // SPECIFIC SERVICE
+    if ($('#specific_service').length) {
 
-        $('#accordion').click(function(e) {
-            
-            if ($(e.target).hasClass('accordion__btn')) {
-                $(e.target).closest('.accordion__item').toggleClass('active');
-                // $(e.target).toggleClass('active');
-                $(e.target).closest('.accordion__item').find('.accordion__price').slideToggle();
-            }
-        });
+        // Page top slider
+        if ($('.slider__list').length) {
+            $('.slider__list').slick({
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: $('.specific_service__slider_arrow--prev'),
+                nextArrow: $('.specific_service__slider_arrow--next'),
+                // autoplay: true,
+                fade: true,
+                centerMode: true,
+                speed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            autoplay: true,
+                            infinite: true
+                        }
+                    },
+                ]
+            });
+        }
     }
 
     // ABOUT
     if ($('#about').length) {
-        
+
         // Page top slider
         if ($('.slider__list').length) {
             $('.slider__list').slick({

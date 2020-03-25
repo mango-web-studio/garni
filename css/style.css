@@ -47,7 +47,7 @@
   font-weight: normal;
   font-style: normal; }
 
-.header__inner, .footer__inner, .home__moments_inner, .home__beauty_inner, .services, .salt_room__slider_inner, .salt_room__article_inner, .salt_room__services_inner, .about__slider_inner, .about__article_inner {
+.header__inner, .footer__inner, .home__moments_inner, .home__beauty_inner, .services, .salt_room__slider_inner, .salt_room__article_inner, .salt_room__services_inner, .about__slider_inner, .about__article_inner, .specific_service__slider_inner, .specific_service__services_inner {
   max-width: 1260px;
   width: 100%;
   margin: 0 auto; }
@@ -501,7 +501,8 @@ textarea {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; }
+            flex-grow: 1;
+    padding-left: 30px; }
     .slider__description_photo {
       position: relative;
       height: 0;
@@ -1097,7 +1098,7 @@ textarea {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 4.86% 0 13.89%;
+    padding: 4.86% 0 13.89% 7.64%;
     z-index: 1; }
     .salt_room__slider_inner .slider {
       width: 50.8%;
@@ -1491,5 +1492,41 @@ textarea {
       font: 9.6rem/9.6rem "MinionPro-Regular";
       border-bottom: 1px solid #382E2B;
       white-space: nowrap; }
+
+.specific_service__slider {
+  background-color: #F5F1E9; }
+  .specific_service__slider_inner {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 4.86% 0 13.89% 7.64%;
+    z-index: 1; }
+    .specific_service__slider_inner .slider {
+      width: 50.8%;
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; }
+  .specific_service__slider_arrows {
+    position: absolute;
+    left: -17%;
+    bottom: 0; }
+    .specific_service__slider_arrows .slider_arrow {
+      border: 1px solid #382E2B; }
+      .specific_service__slider_arrows .slider_arrow_svg {
+        color: #392F2C; }
+    .specific_service__slider_arrows .slick-disabled {
+      border: 1px solid rgba(56, 46, 43, 0.5); }
+
+.specific_service__services {
+  padding: 0 15px;
+  background-color: rgba(245, 241, 233, 0.5); }
+  .specific_service__services_inner {
+    padding: 7.09% 0 10.64%; }
 
 /*# sourceMappingURL=style.css.map */
