@@ -1,11 +1,28 @@
 .header {
-    position: sticky;
-    top: 0;
+    position: relative;
     width: 100%;
     padding: $main_padding;
     background-color: $white_1;
     z-index: 9;
-    transition: background-color 0.2s;
+    transition: background-color 0.4s, top 0.4s;
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &--color {
+        background-color: transparent;
+
+        .nav__link {
+            color: $white_0;
+        }
+
+        svg {
+            fill: $white_0;
+        }
+    }
 
     &__inner {
         @extend %center_block;

@@ -8,7 +8,11 @@
         align-items: center;
         width: 100%;
         height: 100vh;
-        background-color: $white_1;
+        padding: $main_padding;
+    }
+
+    &__content {
+        max-width: 400px;
     }
 
     &__title {
@@ -16,6 +20,7 @@
 
         margin-bottom: 30px;
         color: $brown_0;
+        text-align: center;
     }
 
     &__subtitle {
@@ -23,12 +28,15 @@
 
         margin-bottom: 115px;
         color: $brown_0;
+        text-align: center;
     }
 
     &__link {
         @include font(11px, 18px, "Montserrat-Semibold");
 
         display: block;
+        width: 195px;
+        margin: 0 auto;
         padding: 25px;
         border: 1px solid $brown_0;
         border-radius: 100px;

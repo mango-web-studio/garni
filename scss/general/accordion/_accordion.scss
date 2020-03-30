@@ -56,6 +56,13 @@
 
 .accordion {
 
+    &--active {
+
+        .accordion__btn {
+            transform: rotate(135deg);
+        }
+    }
+
     &__list {
         counter-reset: accordion-item;
     }
@@ -67,13 +74,6 @@
 
         &:first-child {
             border-top: 1px solid $brown_3;
-        }
-
-        &.active {
-
-            .accordion__btn {
-                transform: rotate(135deg);
-            }
         }
     }
 
@@ -135,6 +135,8 @@
         &_title {
             @include font(12px, 20px, "MinionPro-Semibold");
 
+            width: 80%;
+            padding-right: 20px;
             color: $brown_0;
             text-transform: uppercase;
         }
@@ -142,8 +144,8 @@
         &_cost {
             @include font(12px, 20px, "MinionPro-Semibold");
 
+            width: 20%;
             color: $brown_0;
-            text-transform: uppercase;
         }
     }
 

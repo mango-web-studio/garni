@@ -66,6 +66,7 @@
     &__description {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         align-items: center;
         flex-grow: 1;
         padding-left: 30px;
@@ -90,6 +91,7 @@
         &_title {
             @include font(72px, 72px, "MinionPro-Regular");
 
+            align-self: flex-start;
             margin-bottom: 5.65%;
             color: $brown_0;
         }
@@ -111,6 +113,7 @@
             border-radius: 100px;
             color: $brown_0;
             text-align: center;
+            text-transform: uppercase;
         }
     }
 }

@@ -21,7 +21,7 @@
             left: 0;
             height: 100%;
             width: 22.92%;
-            background-color: $white_4;
+            background-color: $white_1;
         }
 
         &_inner {
@@ -71,7 +71,7 @@
 
     &__article {
         padding: $main_padding;
-        background-color: $white_4;
+        background-color: $white_1;
 
         &_inner {
             @extend %center_block;

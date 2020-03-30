@@ -4,9 +4,8 @@ $(document).ready(function() {
     if ($('#accordion').length) {
 
         $('#accordion').click(function(e) {
-
             if ($(e.target).hasClass('accordion__btn')) {
-                $(e.target).closest('.accordion__item').toggleClass('active');
+                $(e.target).closest('.accordion__item').toggleClass('accordion--active');
                 $(e.target).closest('.accordion__item').find('.accordion__price').slideToggle();
             }
         });
@@ -14,40 +13,24 @@ $(document).ready(function() {
 
     // HOME
     if ($('#home').length) {
-        // Header style befor scrolling
-        const headerBefore = {
-            "position": "fixed",
-            "background": "transparent",
-        };
-        const colorBefore = {
-            "color": "#fff"
-        };
-        const fillBefore = {
-            "fill": "#fff"
-        };
-        // Header style after scrolling
-        const headerAfter = {
-            "background": "#FAF8F4"
-        };
-        const colorAfter = {
-            "color": "#000"
-        };
-        const fillAfter = {
-            "fill": "#000"
-        };
-        // Change header after scrolling
-        $('#header').css(headerBefore);
-        $('#header').find('svg').css(fillBefore);
-        $('#nav').find('.nav__link').css(colorBefore);
+
+        // Header
+        $('#header').addClass('header--fixed header--color');    // only 'home' page should have a 'position: fixed' and changed color
+
+        let scrolled = 0;
         $(document).scroll(function() {
-            if ($(window).scrollTop() > 30) {
-                $('#header').css(headerAfter);
-                $('#header').find('svg').css(fillAfter);
-                $('#nav').find('.nav__link').css(colorAfter);
+            if ($(window).scrollTop() > scrolled)  {
+                scrolled = $(window).scrollTop()
+                if ($(window).scrollTop() > 50) {
+                    $('#header').removeClass('header--color');
+                }
+                $('#header').css('top', '-100px');
             } else {
-                $('#header').css(headerBefore);
-                $('#header').find('svg').css(fillBefore);
-                $('#nav').find('.nav__link').css(colorBefore);
+                scrolled = $(window).scrollTop()
+                if ($(window).scrollTop() < 50) {
+                    $('#header').addClass('header--color');
+                }
+                $('#header').css('top', '0');
             }
         })
 

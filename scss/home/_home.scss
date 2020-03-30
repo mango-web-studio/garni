@@ -103,11 +103,14 @@
 
         &_description {
             position: absolute;
-            bottom: calc(30% + 100px);
+            top: 33%;
             left: 50%;
-            transform: translateX(-50%);
+            height: 30%;
             width: 100%;
-            max-width: $site_width;
+            max-width: 1290px;
+            padding: $main_padding;
+            transform: translateX(-50%);
+            overflow: hidden;
             z-index: 1;
         }
 
@@ -115,11 +118,8 @@
             @include font(12px, 20px, "Montserrat-Regular");
 
             width: 195px;
-            max-height: 250px;
             margin-bottom: 45px;
             color: $white_2;
-            overflow: hidden;
-            text-overflow: ellipsis;
 
             &:last-child {
                 margin-bottom: 0;
@@ -132,7 +132,8 @@
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            max-width: 1260px;
+            max-width: 1290px;
+            padding: $main_padding;
             z-index: 1;
             pointer-events: none;
         }
@@ -187,6 +188,7 @@
 
             margin-bottom: 35px;
             color: $brown_0;
+            text-transform: uppercase;
 
             &--italic {
                 font-family: "MinionPro-BoldCnIt";
@@ -333,6 +335,7 @@
             margin-bottom: 35px;
             padding-left: 7.94%;
             color: $brown_0;
+            text-transform: uppercase;
 
             &--italic {
                 font-family: "MinionPro-BoldCnIt";

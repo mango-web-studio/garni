@@ -97,16 +97,24 @@ textarea {
           appearance: none; }
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: relative;
   width: 100%;
   padding: 0 15px;
   background-color: #FAF8F4;
   z-index: 9;
-  -webkit-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  -webkit-transition: background-color 0.4s, top 0.4s;
+  -o-transition: background-color 0.4s, top 0.4s;
+  transition: background-color 0.4s, top 0.4s; }
+  .header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .header--color {
+    background-color: transparent; }
+    .header--color .nav__link {
+      color: #fff; }
+    .header--color svg {
+      fill: #fff; }
   .header__inner {
     display: -webkit-box;
     display: -webkit-flex;
@@ -301,6 +309,20 @@ textarea {
       width: 10px; }
 
 .card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 530px;
   padding: 40px 0; }
   .card:hover .card__flip_inner {
     -webkit-transform: rotateY(180deg);
@@ -325,7 +347,6 @@ textarea {
       color: #382E2B; }
   .card__title {
     font: 3.6rem/4.8rem "MinionPro-Regular";
-    margin-bottom: 16%;
     text-align: center;
     text-transform: uppercase; }
   .card__flip {
@@ -494,6 +515,10 @@ textarea {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -519,6 +544,9 @@ textarea {
          object-fit: cover; }
     .slider__description_title {
       font: 7.2rem/7.2rem "MinionPro-Regular";
+      -webkit-align-self: flex-start;
+          -ms-flex-item-align: start;
+              align-self: flex-start;
       margin-bottom: 5.65%;
       color: #382E2B; }
     .slider__description_paragraph {
@@ -533,7 +561,13 @@ textarea {
       border: 1px solid #382E2B;
       border-radius: 100px;
       color: #382E2B;
-      text-align: center; }
+      text-align: center;
+      text-transform: uppercase; }
+
+.accordion--active .accordion__btn {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg); }
 
 .accordion__list {
   counter-reset: accordion-item; }
@@ -544,10 +578,6 @@ textarea {
   counter-increment: accordion-item; }
   .accordion__item:first-child {
     border-top: 1px solid rgba(56, 46, 43, 0.5); }
-  .accordion__item.active .accordion__btn {
-    -webkit-transform: rotate(135deg);
-        -ms-transform: rotate(135deg);
-            transform: rotate(135deg); }
 
 .accordion__title {
   font: 3.6rem/3.6rem "MinionPro-Semibold";
@@ -611,12 +641,14 @@ textarea {
     margin-bottom: 30px; }
   .accordion__price_title {
     font: 1.2rem/2rem "MinionPro-Semibold";
+    width: 80%;
+    padding-right: 20px;
     color: #382E2B;
     text-transform: uppercase; }
   .accordion__price_cost {
     font: 1.2rem/2rem "MinionPro-Semibold";
-    color: #382E2B;
-    text-transform: uppercase; }
+    width: 20%;
+    color: #382E2B; }
 
 .accordion__btn {
   font: 1.8rem/3.8rem "Montserrat-SemiBold";
@@ -748,24 +780,22 @@ textarea {
        object-fit: cover; }
   .home__slider_description {
     position: absolute;
-    bottom: -webkit-calc(30% + 100px);
-    bottom: calc(30% + 100px);
+    top: 33%;
     left: 50%;
+    height: 30%;
+    width: 100%;
+    max-width: 1290px;
+    padding: 0 15px;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    width: 100%;
-    max-width: 1260px;
+    overflow: hidden;
     z-index: 1; }
   .home__slider_paragraph {
     font: 1.2rem/2rem "Montserrat-Regular";
     width: 195px;
-    max-height: 250px;
     margin-bottom: 45px;
-    color: #F5F1E9;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis; }
+    color: #F5F1E9; }
     .home__slider_paragraph:last-child {
       margin-bottom: 0; }
   .home__slider_arrows {
@@ -776,7 +806,8 @@ textarea {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     width: 100%;
-    max-width: 1260px;
+    max-width: 1290px;
+    padding: 0 15px;
     z-index: 1;
     pointer-events: none; }
   .home__slider .slider_arrow {
@@ -820,7 +851,8 @@ textarea {
   .home__moments_title {
     font: 3.6rem/4.2rem "MinionPro-Semibold";
     margin-bottom: 35px;
-    color: #382E2B; }
+    color: #382E2B;
+    text-transform: uppercase; }
     .home__moments_title--italic {
       font-family: "MinionPro-BoldCnIt"; }
   .home__moments_description {
@@ -940,7 +972,8 @@ textarea {
     font: 3.6rem/4.6rem "MinionPro-Semibold";
     margin-bottom: 35px;
     padding-left: 7.94%;
-    color: #382E2B; }
+    color: #382E2B;
+    text-transform: uppercase; }
     .home__beauty_title--italic {
       font-family: "MinionPro-BoldCnIt"; }
   .home__beauty_description {
@@ -1141,7 +1174,7 @@ textarea {
 
 .salt_room__article {
   padding: 0 15px;
-  background-color: rgba(245, 241, 233, 0.5); }
+  background-color: #FAF8F4; }
   .salt_room__article_inner {
     position: relative;
     display: -webkit-box;
@@ -1235,7 +1268,7 @@ textarea {
 
 .salt_room__services {
   padding: 0 15px;
-  background-color: rgba(245, 241, 233, 0.5); }
+  background-color: #FAF8F4; }
   .salt_room__services_inner {
     padding-bottom: 10.64%; }
 
@@ -1257,7 +1290,7 @@ textarea {
     left: 0;
     height: 100%;
     width: 22.92%;
-    background-color: rgba(245, 241, 233, 0.5); }
+    background-color: #FAF8F4; }
   .about__slider_inner {
     position: relative;
     display: -webkit-box;
@@ -1300,7 +1333,7 @@ textarea {
 
 .about__article {
   padding: 0 15px;
-  background-color: rgba(245, 241, 233, 0.5); }
+  background-color: #FAF8F4; }
   .about__article_inner {
     position: relative;
     display: -webkit-box;
@@ -1547,8 +1580,7 @@ textarea {
       border: 1px solid rgba(56, 46, 43, 0.5); }
 
 .specific_service__services {
-  padding: 0 15px;
-  background-color: rgba(245, 241, 233, 0.5); }
+  padding: 0 15px; }
   .specific_service__services_inner {
     padding: 7.09% 0 10.64%; }
 
@@ -1572,21 +1604,28 @@ textarea {
           align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #FAF8F4; }
+  padding: 0 15px; }
+
+.error__content {
+  max-width: 400px; }
 
 .error__title {
   font: 13rem/13rem "MinionPro-Medium";
   margin-bottom: 30px;
-  color: #382E2B; }
+  color: #382E2B;
+  text-align: center; }
 
 .error__subtitle {
   font: 3.6rem/3.6rem "MinionPro-MediumIt";
   margin-bottom: 115px;
-  color: #382E2B; }
+  color: #382E2B;
+  text-align: center; }
 
 .error__link {
   font: 1.1rem/1.8rem "Montserrat-Semibold";
   display: block;
+  width: 195px;
+  margin: 0 auto;
   padding: 25px;
   border: 1px solid #382E2B;
   border-radius: 100px;
