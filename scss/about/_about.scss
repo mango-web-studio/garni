@@ -2,6 +2,7 @@
 
     &__slider {
         position: relative;
+        padding: $main_padding;
         background-color: $white_2;
 
         &::before {
@@ -10,17 +11,7 @@
             top: 0;
             left: 0;
             height: 100%;
-            width: 22.92%;
-            background-color: $white_1;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 22.92%;
+            width: 20%;
             background-color: $white_1;
         }
 
@@ -30,12 +21,40 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            padding: 4.86% 0 13.89%;
+            padding: 140px 0 200px;
             z-index: 1;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 19.05%;
+                background-color: #FAF8F4;
+            }
 
             .slider {
                 width: 50.8%;
-                align-self: flex-end;
+                align-self: flex-start;
+
+                &__photo {
+
+                    &--small {
+                        top: 167px;
+                        width: 46.8%;
+                        padding-bottom: 35.88%;
+                    }
+                }
+
+                &__description {
+                    align-self: flex-start;
+
+                    &_photo {
+                        top: -65px;
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
 
@@ -79,7 +98,7 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            padding: 13.12% 0 10.64%;
+            padding: 185px 0 150px;
         }
 
         &_slogan {

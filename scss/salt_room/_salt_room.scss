@@ -1,6 +1,7 @@
 .salt_room {
 
     &__slider {
+        padding: $main_padding;
         background-color: $white_2;
 
         &_inner {
@@ -9,12 +10,22 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            padding: 4.86% 0 13.89% 7.64%;
+            padding: 150px 0 200px 7.64%;
             z-index: 1;
 
             .slider {
                 width: 50.8%;
                 align-self: flex-end;
+
+                &__photo--small {
+                    margin-top: 40px;
+                    transform: translateY(0);
+                }
+            }
+
+            .slider__description {
+                justify-content: flex-start;
+                padding-top: 35px;
             }
         }
 
@@ -47,7 +58,7 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            padding: 4.76% 0 11.51%;
+            padding: 60px 0 150px;
         }
 
         &_photo {

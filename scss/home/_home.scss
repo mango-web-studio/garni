@@ -333,7 +333,7 @@
             @include font(36px, 46px, "MinionPro-Semibold");
 
             margin-bottom: 35px;
-            padding-left: 7.94%;
+            // padding-left: 7.94%;
             color: $brown_0;
             text-transform: uppercase;
 
@@ -352,9 +352,9 @@
                 justify-content: space-between;
                 width: 50%;
 
-                .home__beauty_description_paragraph {
-                    margin-left: 15.87%;
-                }
+                // .home__beauty_description_paragraph {
+                //     margin-left: 15.87%;
+                // }
 
                 .home__beauty_description_photo {
                     align-self: flex-end;
@@ -402,7 +402,8 @@
         padding-right: 15px;
         
         &_inner {
-            @include background(url("../img/home/news/bg.png"), 74%, 20%, 20%);
+            @include background(url("../img/svg/home/news/bg.svg"), 74%, 20%, 20%);
+            // @include background(url("../img/home/news/bg.png"), 74%, 20%, 20%);
 
             display: flex;
             flex-direction: row-reverse;

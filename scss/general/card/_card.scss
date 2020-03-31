@@ -28,8 +28,23 @@
 
     &:hover {
 
-        .card__flip_inner {
-            transform: rotateY(180deg);
+        // .card__flip_inner {
+        //     transform: rotateY(180deg);
+        // }
+        .card {
+
+            &__flip {
+
+                &_front {
+                    opacity: 0;
+                    // visibility: hidden;
+                }
+
+                &_back {
+                    opacity: 1;
+                    // visibility: hidden;
+                }
+            }
         }
     }
 
@@ -89,26 +104,28 @@
             position: relative;
             padding-bottom: 100%;
             text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
+            // transition: transform 0.8s;
+            // transform-style: preserve-3d;
         }
 
         &_front  {
             position: absolute;
             width: 93.6%;
             height: 100%;
-            backface-visibility: hidden;
+            // backface-visibility: hidden;
+            opacity: 1;
+            transition: opacity 0.4s;
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.15);
-                backface-visibility: hidden;
-            }
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: rgba(0, 0, 0, 0.15);
+            //     backface-visibility: hidden;
+            // }
         }
 
         &_img {
@@ -125,8 +142,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            backface-visibility: hidden;
-            transform: rotateY(180deg);
+            // backface-visibility: hidden;
+            // transform: rotateY(180deg);
+            opacity: 0;
+            // visibility: hidden;
+            transition: opacity 0.4s;
         }
 
         &_description {

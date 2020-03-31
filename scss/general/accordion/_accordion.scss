@@ -9,7 +9,9 @@
 
 //                 </p>
 //                 <div class="accordion__btn">
-//                     +
+//                     <svg class="accordion__svg" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+//                         <path d="M8.59 5.24H5.242V8.516H4.108V5.24H0.76V4.178H4.108V0.883999H5.242V4.178H8.59V5.24Z" />
+//                     </svg>
 //                 </div>
 //             </div>
 //             <div class="accordion__price">
@@ -68,6 +70,7 @@
     }
 
     &__item {
+        min-height: 150px;
         padding: 3.57% 12px;
         border-bottom: 1px solid $brown_3;
         counter-increment: accordion-item;
@@ -87,7 +90,9 @@
     &__description {
         position: relative;
         display: grid;
-        grid-template-columns: minmax(400px, 40.45%) minmax(400px, 32.77%) 40px;
+        grid-template-columns: minmax(400px, 40.45%) minmax(300px, 33.17%) 40px;
+        grid-template-rows: minmax(58px, 1fr);
+        grid-gap: 15px;
         justify-content: space-between;
         align-items: center;
 
@@ -107,7 +112,6 @@
     &__paragraph {
         @include font(12px, 20px, "Montserrat-Regular");
 
-        min-width: 400px;
         color: $gray_0;
     }
 
@@ -130,6 +134,10 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &_title {
@@ -150,15 +158,23 @@
     }
 
     &__btn {
-        @include font(18px, 38px, "Montserrat-SemiBold");
-
-        text-align: center;
+        position: relative;
         width: 40px;
+        height: 40px;
         border: 1px solid $brown_0;
         border-radius: 50%;
-        color: $brown_0;
         cursor: pointer;
-        user-select: none;
         transition: transform 0.4s ease-in-out;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        margin: 0 auto;
+        fill: $brown_0;
     }
 }

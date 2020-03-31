@@ -4,7 +4,7 @@ $(document).ready(function() {
     if ($('#accordion').length) {
 
         $('#accordion').click(function(e) {
-            if ($(e.target).hasClass('accordion__btn')) {
+            if ($(e.target).closest('.accordion__btn').length) {
                 $(e.target).closest('.accordion__item').toggleClass('accordion--active');
                 $(e.target).closest('.accordion__item').find('.accordion__price').slideToggle();
             }
