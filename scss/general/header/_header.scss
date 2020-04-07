@@ -4,7 +4,7 @@
     padding: $main_padding;
     background-color: $white_1;
     z-index: 9;
-    transition: background-color 0.4s, top 0.4s;
+    transition: background-color 0.5s, top 0.5s;
 
     &--fixed {
         position: fixed;
@@ -39,6 +39,12 @@
             max-width: 153px;
         }
 
+        &_mobile_svg {
+            display: none;
+            fill: $brown_0;
+            transition: fill 0.2s;
+        }
+
         &_svg {
             fill: $brown_0;
             transition: fill 0.2s;
@@ -67,6 +73,53 @@
         &_svg {
             fill: $brown_0;
             transition: fill 0.2s;
+        }
+    }
+
+    &__menu_btn {
+        display: none;
+        width: 30px;
+        height: 15px;
+
+        &_svg {
+            fill: $brown_0;
+            transition: fill 0.2s;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .header {
+        min-height: 80px;
+        padding: 20px 30px;
+
+        &__inner {
+            padding: 0;
+        }
+
+        &__logo {
+
+            &_mobile_svg {
+                display: block;
+            }
+
+            &_svg {
+                display: none;
+            }
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__social {
+            display: none;
+        }
+
+        &__menu_btn {
+            display: block;
         }
     }
 }

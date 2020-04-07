@@ -164,7 +164,13 @@
         border: 1px solid $brown_0;
         border-radius: 50%;
         cursor: pointer;
-        transition: transform 0.4s ease-in-out;
+        fill: $brown_0;
+        transition: background-color 0.2s, fill 0.2s, transform 0.4s ease-in-out;
+
+        &:hover {
+            background-color: $brown_0;
+            fill: $white_1;
+        }
     }
 
     &__svg {
@@ -175,6 +181,5 @@
         width: 12px;
         height: 12px;
         margin: 0 auto;
-        fill: $brown_0;
     }
 }

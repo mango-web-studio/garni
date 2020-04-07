@@ -25,14 +25,18 @@
 
             .slider_arrow {
                 border: 1px solid $brown_0;
+                fill: $brown_0;
+                transition: background-color 0.2s, fill 0.2s;
 
-                &_svg {
-                    color: $brown_1;
+                &:hover {
+                    background-color: $brown_0;
+                    fill: $white_2;
                 }
             }
 
             .slick-disabled {
                 border: 1px solid $brown_3;
+                pointer-events: none;
             }
         }
     }

@@ -24,7 +24,7 @@ $(document).ready(function() {
                 if ($(window).scrollTop() > 50) {
                     $('#header').removeClass('header--color');
                 }
-                $('#header').css('top', '-100px');
+                $('#header').css('top', '-100%');
             } else {
                 scrolled = $(window).scrollTop()
                 if ($(window).scrollTop() < 50) {

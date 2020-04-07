@@ -119,6 +119,12 @@
             color: $brown_0;
             text-align: center;
             text-transform: uppercase;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover {
+                background-color: $brown_0;
+                color: $white_2;
+            }
         }
     }
 }

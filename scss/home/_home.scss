@@ -140,14 +140,12 @@
 
         .slider_arrow {
             border:  1px solid $white_0;
-
-            &_svg {
-                fill: $white_0;
-            }
+            fill: $white_0;
         }
 
         .slick-disabled {
             border-color: $white_3;
+            pointer-events: none;
         }
     }
 
@@ -275,14 +273,18 @@
 
             .slider_arrow {
                 border:  1px solid $brown_2;
-    
-                &_svg {
-                    fill: $brown_1;
+                fill: $brown_2;
+                transition: background-color 0.2s, fill 0.2s;
+
+                &:hover {
+                    background-color: $brown_2;
+                    fill: $white_1;
                 }
             }
     
             .slick-disabled {
                 border-color: $brown_3;
+                pointer-events: none;
             }
         }
 
@@ -352,10 +354,6 @@
                 justify-content: space-between;
                 width: 50%;
 
-                // .home__beauty_description_paragraph {
-                //     margin-left: 15.87%;
-                // }
-
                 .home__beauty_description_photo {
                     align-self: flex-end;
                     margin-right: 18%;
@@ -403,7 +401,6 @@
         
         &_inner {
             @include background(url("../img/svg/home/news/bg.svg"), 74%, 20%, 20%);
-            // @include background(url("../img/home/news/bg.png"), 74%, 20%, 20%);
 
             display: flex;
             flex-direction: row-reverse;
@@ -438,14 +435,18 @@
 
             .slider_arrow {
                 border:  1px solid $brown_2;
-    
-                &_svg {
-                    fill: $brown_1;
+                fill: $brown_2;
+                transition: background-color 0.2s, fill 0.2s;
+
+                &:hover {
+                    background-color: $brown_2;
+                    fill: $white_1;
                 }
             }
     
             .slick-disabled {
                 border-color: $brown_3;
+                pointer-events: none;
             }
         }
 
@@ -494,6 +495,49 @@
                 border-radius: 100px;
                 color: $brown_0;
                 text-transform: uppercase;
+                transition:  color 0.2s, background-color 0.2s;
+
+                &:hover {
+                    background-color: $brown_0;
+                    color: $white_1;
+                }
+            }
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .home {
+
+        &__banner {
+
+            &_title {
+                right: 0;
+                font-size: 5.4rem;
+                line-height: 1;
+
+                &::after {
+                    width: 294px;
+                    height: 294px;
+                    right: -40px;
+                }
+            }
+
+            &_language {
+                display: none;
+            }
+        }
+
+        &__slider {
+
+            &_description {
+                display: none;
+            }
+
+            &_arrows {
+                display: none;
             }
         }
     }
