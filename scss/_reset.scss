@@ -1,5 +1,6 @@
 html {
 	font-size: $base_font_size;
+	scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -13,8 +14,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
-	-ms-overflow-style: none;
 	background-color: $white_1;
+	-ms-overflow-style: none;
 
 	&::-webkit-scrollbar {
 		display: none;

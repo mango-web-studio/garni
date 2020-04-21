@@ -544,8 +544,9 @@
             &_link {
                 @include font(11px, 20px, "Montserrat-SemiBold");
 
-                display: inline-block;
-                padding: 23px 55px;
+                padding: 23px;
+                width: 200px;
+                text-align: center;
                 border: 1px solid $brown_0;
                 border-radius: 100px;
                 color: $brown_0;
@@ -711,16 +712,69 @@
             padding: 0 30px;
 
             &_inner {
+                flex-direction: column;
                 padding: 37px 0;
             }
 
-            &_photo {
-                top: 320px;
-                left: unset;
-                right: 0;
-                width: 84.13%;
-                padding-bottom: 119.37%;
-                transform: none;
+            &_left {
+                width: 100%;
+                margin-bottom: 80px;
+            }
+
+            &_middle {
+                position: relative;
+                width: 100%;
+                margin-bottom: 80px;
+
+                .home__beauty_photo {
+
+                    &:first-child {
+                        width: 84.13%;
+                        padding-bottom: 119.37%;
+                        margin-top: 0;
+                        margin-left: auto;
+                        transform: translateX(30px);
+                    }
+
+                    &:nth-child(2) {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 61.59%;
+                        padding-bottom: 78.1%;
+                    }
+                }
+            }
+
+            &_right {
+                display: flex;
+                flex-direction: column-reverse;
+                width: 100%;
+
+                .home__beauty {
+
+                    &_photo {
+                        width: 85.08%;
+                        padding-bottom: 85.08%;
+                    }
+
+                    &_img {
+
+                        &:nth-child(2) {
+                            display: block;
+                            width: 50%;
+                            height: 50%;
+                            bottom: 0;
+                            top: unset;
+                            transform: translate(-50%, 50%);
+                        }
+                    }
+
+                    &_paragraph {
+                        margin-bottom: 80px;
+                    }
+                }
             }
 
             &_title {
@@ -728,41 +782,67 @@
                 line-height: 3.1rem;
                 margin-bottom: 50px;
                 text-align: center;
+                white-space: normal;
+            }
+
+            &_paragraph {
+                width: 69.84%;
+                min-width: 220px;
+                margin: 0 auto;
+            }
+        }
+
+        &__news {
+            padding-right: 0;
+
+            &_inner {
+                flex-direction: column;
+                width: 100%;
+                padding: 50px 0;
+                background-image: none;
+            }
+
+            &_title {
+                width: 100%;
+                margin-bottom: 52px;
+
+                &_text {
+                    font-size: 7.2rem;
+                    line-height: 8rem;
+                    writing-mode: unset;
+                    text-align: center;
+                }
+            }
+
+            &_slider {
+                width: 100%;
+
+                &_arrows {
+                    display: none;
+                }
+            }
+
+            &_list {
+                margin-bottom: 50px;
+            }
+
+            &_item {
+                margin: 0 15px;
             }
 
             &_description {
-                display: block;
-
-                &_left {
-                    width: 100%;
-                    margin-bottom: 80px;
-
-                    .home__beauty_description_photo {
-                        align-self: flex-start;
-                        width: 61.59%;
-                        padding-bottom: 78.1%;
-                        margin-right: 0;
-                    }
-
-                    .home__beauty_description_paragraph {
-                        margin-bottom: calc(75% + 80px);
-                    }
-                }
-
-                &_right {
-                    flex-direction: column-reverse;
-                    width: 100%;
-
-                    .home__beauty_description_photo {
-                        width: 85.08%;
-                        padding-bottom: 85.08%;
-                        transform: none;
-                    }
-                }
+                flex-direction: column-reverse;
+                align-items: center;
+                padding-left: 0;
 
                 &_paragraph {
-                    max-width: 220px;
-                    margin: 0 auto 80px;
+                    width: 58.67%;
+                    min-width: 220px;
+                    margin: 0 auto;
+                }
+
+                &_link {
+                    margin-bottom: 43px;
                 }
             }
         }
