@@ -186,5 +186,123 @@
 // 0 - 767
 @include respond-to(mobile) {
 
-    
+    .about {
+        
+        &__slider {
+            padding: 0 30px;
+
+            &::before {
+                display: none;
+            }
+
+            &_arrows {
+                display: none;
+            }
+
+            &_inner {
+                flex-direction: column;
+                padding: 30px 0;
+
+                &::before {
+                    display: none;
+                }
+
+                .slider {
+                    width: 100%;
+                    margin-bottom: 80px;
+
+                    &__photo {
+
+                        &--small {
+                            width: 56.83%;
+                            padding-bottom: 37.78%;
+                            transform: translateY(-40%);
+                            margin-top: 0;
+                        }
+                    }
+
+                    &__description {
+                        width: 100%;
+
+                        &_photo {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &_title {
+                font-size: 7.2rem;
+                line-height: 7.8rem;
+                color: $brown_0;
+                max-width: unset;
+                margin-bottom: 50px;
+                transform: rotate(0);
+                writing-mode: unset;
+                text-align: center;
+            }
+        }
+
+        &__article {
+            padding: 0 30px;
+
+            &_inner {
+                flex-direction: column-reverse;
+                padding: 50px 0;
+            }
+
+            &_slogan {
+                bottom: unset;
+                top: 45%;
+                width: 100%;
+                max-width: 244px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2.4rem;
+                line-height: 3.1rem;
+            }
+
+            &_photo {
+                width: 109.21%;
+                padding-bottom: 83.81%;
+                left: -30px;
+            }
+
+            &_description {
+                flex-direction: column-reverse;
+                width: 100%;
+                margin-bottom: 50px;
+
+                &_photos {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 200px;
+                }
+                
+                &_photo {
+
+                    &_1 {
+                        width: 57.78%;
+                        padding-bottom: 86.98%;
+                       margin-right: auto; 
+                    }
+
+                    &_2 {
+                        position: absolute;
+                        top: 50%;
+                        right: -30px;
+                        transform:  translateY(-50%);
+                        width: 57.78%;
+                        padding-bottom: 57.78%;
+                    }
+                }
+            }
+
+            &_paragraph {
+                width: 69.84%;
+                min-width: 220px;
+                margin: 0 auto;
+            }
+        }
+    }
 }

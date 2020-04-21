@@ -137,11 +137,16 @@
         &__photo {
 
             &--small {
+                position: absolute;
+                top: 50%;
                 width: 56.83%;
                 padding-bottom: 37.78%;
+                transform: translateY(-50%);
+                margin-top: 0;
             }
 
             &--normal {
+                padding-bottom: 85.71%;
                 margin-left: auto;
             }
         }

@@ -616,9 +616,16 @@ textarea {
 
 @media only screen and (max-width: 767px) {
   .slider__photo--small {
+    position: absolute;
+    top: 50%;
     width: 56.83%;
-    padding-bottom: 37.78%; }
+    padding-bottom: 37.78%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin-top: 0; }
   .slider__photo--normal {
+    padding-bottom: 85.71%;
     margin-left: auto; }
   .slider__description {
     padding-left: 0; }
@@ -1690,11 +1697,9 @@ textarea {
       .salt_room__slider_inner .slider {
         width: 100%; }
         .salt_room__slider_inner .slider__photo--small {
-          position: absolute;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
-                  transform: translateY(-50%);
+          -webkit-transform: translateY(-60%);
+              -ms-transform: translateY(-60%);
+                  transform: translateY(-60%);
           margin-top: 0; }
         .salt_room__slider_inner .slider__description {
           padding-top: 80px; }
@@ -1907,6 +1912,103 @@ textarea {
     font: 1.2rem/2rem "Montserrat-Regular";
     width: 205px;
     color: #9E9E9E; }
+
+@media only screen and (max-width: 767px) {
+  .about__slider {
+    padding: 0 30px; }
+    .about__slider::before {
+      display: none; }
+    .about__slider_arrows {
+      display: none; }
+    .about__slider_inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 30px 0; }
+      .about__slider_inner::before {
+        display: none; }
+      .about__slider_inner .slider {
+        width: 100%;
+        margin-bottom: 80px; }
+        .about__slider_inner .slider__photo--small {
+          width: 56.83%;
+          padding-bottom: 37.78%;
+          -webkit-transform: translateY(-40%);
+              -ms-transform: translateY(-40%);
+                  transform: translateY(-40%);
+          margin-top: 0; }
+        .about__slider_inner .slider__description {
+          width: 100%; }
+          .about__slider_inner .slider__description_photo {
+            display: none; }
+    .about__slider_title {
+      font-size: 7.2rem;
+      line-height: 7.8rem;
+      color: #382E2B;
+      max-width: unset;
+      margin-bottom: 50px;
+      -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-writing-mode: unset;
+          -ms-writing-mode: unset;
+              writing-mode: unset;
+      text-align: center; }
+  .about__article {
+    padding: 0 30px; }
+    .about__article_inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      padding: 50px 0; }
+    .about__article_slogan {
+      bottom: unset;
+      top: 45%;
+      width: 100%;
+      max-width: 244px;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      font-size: 2.4rem;
+      line-height: 3.1rem; }
+    .about__article_photo {
+      width: 109.21%;
+      padding-bottom: 83.81%;
+      left: -30px; }
+    .about__article_description {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      width: 100%;
+      margin-bottom: 50px; }
+      .about__article_description_photos {
+        position: relative;
+        width: 100%;
+        margin-bottom: 200px; }
+      .about__article_description_photo_1 {
+        width: 57.78%;
+        padding-bottom: 86.98%;
+        margin-right: auto; }
+      .about__article_description_photo_2 {
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 57.78%;
+        padding-bottom: 57.78%; }
+    .about__article_paragraph {
+      width: 69.84%;
+      min-width: 220px;
+      margin: 0 auto; } }
 
 .contacts__form {
   position: relative;
