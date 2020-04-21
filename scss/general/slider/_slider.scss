@@ -128,3 +128,32 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .slider {
+
+        &__photo {
+
+            &--small {
+                width: 56.83%;
+                padding-bottom: 37.78%;
+            }
+
+            &--normal {
+                margin-left: auto;
+            }
+        }
+
+        &__description {
+            padding-left: 0;
+
+            &_title {
+                position: absolute;
+                top: 30px;
+                left: 0;
+            }
+        }
+    }
+}

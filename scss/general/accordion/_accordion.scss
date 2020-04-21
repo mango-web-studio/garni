@@ -183,3 +183,69 @@
         margin: 0 auto;
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .accordion {
+
+        &__item {
+            position: relative;
+            padding: 60px 12px;
+
+            &::before {
+                @include font(14px, 14px, "MinionPro-Semibold");
+
+                content: "0" counter(accordion-item);
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $brown_0;
+                opacity: 0.2;
+            }
+        }
+
+        &__description {
+            grid-template-columns: calc(100% - 40px) 40px;
+            grid-template-rows: auto;
+            grid-gap: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &__title {
+            padding-left: 0;
+            font-size: 2.4rem;
+            line-height: 2.4rem;
+        }
+
+        &__paragraph {
+            display: none;
+        }
+
+        &__price {
+
+            &_inner {
+                display: block;
+            }
+
+            &_item {
+                display: grid;
+                grid-template-columns: calc(100% - 40px) 40px;
+            }
+
+            &_title {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            &_cost {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

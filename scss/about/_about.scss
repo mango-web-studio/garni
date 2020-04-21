@@ -41,7 +41,7 @@
                 &__photo {
 
                     &--small {
-                        top: 167px;
+                        margin-top: 26.1%;
                         width: 46.8%;
                         padding-bottom: 35.88%;
                     }
@@ -181,4 +181,10 @@
             color: $gray_0;
         }
     }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    
 }

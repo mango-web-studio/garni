@@ -614,6 +614,19 @@ textarea {
         background-color: #382E2B;
         color: #F5F1E9; }
 
+@media only screen and (max-width: 767px) {
+  .slider__photo--small {
+    width: 56.83%;
+    padding-bottom: 37.78%; }
+  .slider__photo--normal {
+    margin-left: auto; }
+  .slider__description {
+    padding-left: 0; }
+    .slider__description_title {
+      position: absolute;
+      top: 30px;
+      left: 0; } }
+
 .accordion--active .accordion__btn {
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
@@ -731,6 +744,47 @@ textarea {
   width: 12px;
   height: 12px;
   margin: 0 auto; }
+
+@media only screen and (max-width: 767px) {
+  .accordion__item {
+    position: relative;
+    padding: 60px 12px; }
+    .accordion__item::before {
+      font: 1.4rem/1.4rem "MinionPro-Semibold";
+      content: "0" counter(accordion-item);
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      color: #382E2B;
+      opacity: 0.2; }
+  .accordion__description {
+    grid-template-columns: -webkit-calc(100% - 40px) 40px;
+    grid-template-columns: calc(100% - 40px) 40px;
+    grid-template-rows: auto;
+    grid-gap: 0; }
+    .accordion__description::before {
+      display: none; }
+  .accordion__title {
+    padding-left: 0;
+    font-size: 2.4rem;
+    line-height: 2.4rem; }
+  .accordion__paragraph {
+    display: none; }
+  .accordion__price_inner {
+    display: block; }
+  .accordion__price_item {
+    display: grid;
+    grid-template-columns: -webkit-calc(100% - 40px) 40px;
+    grid-template-columns: calc(100% - 40px) 40px; }
+  .accordion__price_title {
+    width: 100%;
+    padding-right: 0; }
+  .accordion__price_cost {
+    width: 100%;
+    text-align: center; } }
 
 .preloader {
   display: none; }
@@ -1621,6 +1675,69 @@ textarea {
   .salt_room__services_inner {
     padding-bottom: 10.64%; }
 
+@media only screen and (max-width: 767px) {
+  .salt_room__slider {
+    padding: 0 30px; }
+    .salt_room__slider_arrows {
+      display: none; }
+    .salt_room__slider_inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 224px 0 30px; }
+      .salt_room__slider_inner .slider {
+        width: 100%; }
+        .salt_room__slider_inner .slider__photo--small {
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          margin-top: 0; }
+        .salt_room__slider_inner .slider__description {
+          padding-top: 80px; }
+  .salt_room__article {
+    padding: 0 30px; }
+    .salt_room__article_inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; }
+    .salt_room__article_title {
+      width: 100%;
+      margin: 80px 0 50px;
+      font-size: 2.4rem;
+      line-height: 3.1rem; }
+    .salt_room__article_description {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .salt_room__article_description_photos {
+        width: 100%; }
+      .salt_room__article_description_photo_1 {
+        width: 51.11%;
+        padding-bottom: 68.25%;
+        margin: -30% auto 0;
+        z-index: 1; }
+      .salt_room__article_description_photo_2 {
+        display: none; }
+    .salt_room__article_paragraph_text {
+      width: 69.84%;
+      min-width: 220px;
+      margin: 0 auto; }
+    .salt_room__article_photo {
+      width: 100%;
+      padding-bottom: 153.97%; }
+  .salt_room__services {
+    padding: 0 30px; }
+    .salt_room__services_inner {
+      padding-bottom: 30px; } }
+
 .about__slider {
   position: relative;
   padding: 0 15px;
@@ -1659,7 +1776,7 @@ textarea {
           -ms-flex-item-align: start;
               align-self: flex-start; }
       .about__slider_inner .slider__photo--small {
-        top: 167px;
+        margin-top: 26.1%;
         width: 46.8%;
         padding-bottom: 35.88%; }
       .about__slider_inner .slider__description {
