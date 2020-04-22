@@ -392,7 +392,9 @@ textarea {
     height: 96px;
     text-align: center;
     text-transform: uppercase;
-    overflow: hidden; }
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis; }
   .card__flip {
     width: -webkit-calc(100% - 2px);
     width: calc(100% - 2px);
@@ -453,6 +455,22 @@ textarea {
       border-radius: 100px;
       color: #382E2B;
       text-transform: uppercase; }
+
+@media only screen and (max-width: 1023px) {
+  .card {
+    min-height: unset; }
+    .card__title {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      height: 72px; } }
+
+@media only screen and (max-width: 767px) {
+  .card {
+    padding: 20px 0; }
+    .card__title {
+      font-size: 2.6rem;
+      line-height: 3rem;
+      height: 60px; } }
 
 .form {
   display: -webkit-box;
@@ -629,10 +647,18 @@ textarea {
     margin-left: auto; }
   .slider__description {
     padding-left: 0; }
+    .slider__description_paragraph {
+      margin-bottom: 50px; }
     .slider__description_title {
       position: absolute;
       top: 30px;
-      left: 0; } }
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 100%;
+      padding: 0 30px;
+      text-align: center; } }
 
 .accordion--active .accordion__btn {
   -webkit-transform: rotate(135deg);
@@ -658,7 +684,7 @@ textarea {
 .accordion__description {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(400px, 40.45%) minmax(300px, 33.17%) 40px;
+  grid-template-columns: minmax(364px, 40.45%) minmax(280px, 33.17%) 40px;
   grid-template-rows: minmax(58px, 1fr);
   grid-gap: 15px;
   -webkit-box-pack: justify;
@@ -690,7 +716,8 @@ textarea {
   margin-top: 55px; }
   .accordion__price_inner {
     display: grid;
-    grid-template-columns: 40.45% 32.77% 40px;
+    grid-template-columns: minmax(364px, 40.45%) minmax(280px, 33.17%) 40px;
+    grid-gap: 15px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -752,6 +779,12 @@ textarea {
   height: 12px;
   margin: 0 auto; }
 
+@media only screen and (max-width: 1023px) {
+  .accordion__title {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding-left: 60px; } }
+
 @media only screen and (max-width: 767px) {
   .accordion__item {
     position: relative;
@@ -768,10 +801,8 @@ textarea {
       color: #382E2B;
       opacity: 0.2; }
   .accordion__description {
-    grid-template-columns: -webkit-calc(100% - 40px) 40px;
-    grid-template-columns: calc(100% - 40px) 40px;
-    grid-template-rows: auto;
-    grid-gap: 0; }
+    grid-template-columns: auto 40px;
+    grid-template-rows: auto; }
     .accordion__description::before {
       display: none; }
   .accordion__title {
@@ -784,8 +815,8 @@ textarea {
     display: block; }
   .accordion__price_item {
     display: grid;
-    grid-template-columns: -webkit-calc(100% - 40px) 40px;
-    grid-template-columns: calc(100% - 40px) 40px; }
+    grid-template-columns: auto 40px;
+    grid-gap: 15px; }
   .accordion__price_title {
     width: 100%;
     padding-right: 0; }
@@ -1534,6 +1565,20 @@ textarea {
     grid-template-columns: repeat(3, minmax(100px, 1fr));
     grid-gap: 20px; }
 
+@media only screen and (max-width: 1023px) {
+  .services {
+    padding: 30px 0; } }
+
+@media only screen and (max-width: 767px) {
+  .services {
+    padding: 30px; }
+    .services__list {
+      grid-template-columns: repeat(2, minmax(100px, 1fr)); } }
+
+@media only screen and (max-width: 479px) {
+  .services__list {
+    grid-template-columns: 1fr; } }
+
 .salt_room__slider {
   padding: 0 15px;
   background-color: #F5F1E9; }
@@ -2268,6 +2313,20 @@ textarea {
   padding: 0 15px; }
   .specific_service__services_inner {
     padding: 7.09% 0 10.64%; }
+
+@media only screen and (max-width: 767px) {
+  .specific_service__slider_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 185px 30px 30px; }
+    .specific_service__slider_inner .slider {
+      width: 100%;
+      margin-bottom: 80px; }
+  .specific_service__slider_arrows {
+    display: none; } }
 
 .error__inner {
   background-image: url("../img/error/bg.png");

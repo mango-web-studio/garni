@@ -154,10 +154,18 @@
         &__description {
             padding-left: 0;
 
+            &_paragraph {
+                margin-bottom: 50px;
+            }
+
             &_title {
                 position: absolute;
                 top: 30px;
-                left: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                padding: 0 30px;
+                text-align: center;
             }
         }
     }

@@ -51,3 +51,27 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .specific_service {
+
+        &__slider {
+
+            &_inner {
+                flex-direction: column;
+                padding: 185px 30px 30px;
+
+                .slider {
+                    width: 100%;
+                    margin-bottom: 80px;
+                }
+            }
+
+            &_arrows {
+                display: none;
+            }
+        }
+    }
+}

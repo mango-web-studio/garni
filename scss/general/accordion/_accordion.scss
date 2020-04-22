@@ -90,7 +90,7 @@
     &__description {
         position: relative;
         display: grid;
-        grid-template-columns: minmax(400px, 40.45%) minmax(300px, 33.17%) 40px;
+        grid-template-columns: minmax(364px, 40.45%) minmax(280px, 33.17%) 40px;
         grid-template-rows: minmax(58px, 1fr);
         grid-gap: 15px;
         justify-content: space-between;
@@ -121,7 +121,8 @@
 
         &_inner {
             display: grid;
-            grid-template-columns: 40.45% 32.77% 40px;
+            grid-template-columns: minmax(364px, 40.45%) minmax(280px, 33.17%) 40px;
+            grid-gap: 15px;
             justify-content: space-between;
         }
 
@@ -184,6 +185,19 @@
     }
 }
 
+// 0 - 1023
+@include respond-to(tablet) {
+
+    .accordion {
+
+        &__title {
+            font-size: 3rem;
+            line-height: 3rem;
+            padding-left: 60px;
+        }
+    }
+}
+
 // 0 - 767
 @include respond-to(mobile) {
 
@@ -207,9 +221,8 @@
         }
 
         &__description {
-            grid-template-columns: calc(100% - 40px) 40px;
+            grid-template-columns: auto 40px;
             grid-template-rows: auto;
-            grid-gap: 0;
 
             &::before {
                 display: none;
@@ -234,7 +247,8 @@
 
             &_item {
                 display: grid;
-                grid-template-columns: calc(100% - 40px) 40px;
+                grid-template-columns: auto 40px;
+                grid-gap: 15px;
             }
 
             &_title {
