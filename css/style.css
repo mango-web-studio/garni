@@ -2023,11 +2023,6 @@ textarea {
     width: 14.04%;
     background-color: #FAF8F4; }
   .contacts__form_inner {
-    background-image: url("../img/contacts/bg.png");
-    background-position: 66% 95%;
-    background-size: 20%;
-    background-color: transparent;
-    background-repeat: no-repeat;
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2055,8 +2050,12 @@ textarea {
     max-width: 400px; }
   .contacts__form_photo {
     position: relative;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
     width: 37.04%;
-    padding-bottom: 33.33%; }
+    padding-bottom: 33.33%;
+    height: 0; }
   .contacts__form_img {
     position: absolute;
     top: 0;
@@ -2065,6 +2064,16 @@ textarea {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+    .contacts__form_img:nth-child(2) {
+      position: absolute;
+      top: unset;
+      left: 0;
+      bottom: 0;
+      -webkit-transform: translate(-50%, 50%);
+          -ms-transform: translate(-50%, 50%);
+              transform: translate(-50%, 50%);
+      width: 45%;
+      height: 45%; }
 
 .contacts__description {
   padding-right: 15px; }
@@ -2134,6 +2143,90 @@ textarea {
       font: 9.6rem/9.6rem "MinionPro-Regular";
       border-bottom: 1px solid #382E2B;
       white-space: nowrap; }
+
+@media only screen and (max-width: 1023px) {
+  .contacts__form {
+    padding: 0 30px; }
+    .contacts__form::after {
+      display: none; }
+    .contacts__form_inner {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 30px 0 80px; }
+    .contacts__form_title {
+      margin-bottom: 80px; }
+      .contacts__form_title_text {
+        font-size: 7.2rem;
+        line-height: 8rem;
+        -webkit-writing-mode: unset;
+            -ms-writing-mode: unset;
+                writing-mode: unset;
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
+        color: #382E2B;
+        text-align: center; }
+    .contacts__form_wrap {
+      margin: 0 auto 75px; }
+    .contacts__form_photo {
+      width: 350px;
+      padding-bottom: 315px;
+      margin: 0 auto; }
+  .contacts__description {
+    padding: 0 30px; }
+    .contacts__description_inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      padding: 30px 0 50px; }
+  .contacts__map {
+    width: 100%;
+    padding-bottom: 300px; }
+  .contacts__address {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-right: 0;
+    margin-bottom: 35px; }
+    .contacts__address_list {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .contacts__address_title {
+      margin-bottom: 30px; }
+    .contacts__address_link--phone {
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+      margin-bottom: 50px;
+      font-size: 4.4rem;
+      line-height: 4.9rem; } }
+
+@media only screen and (max-width: 767px) {
+  .contacts__form_photo {
+    width: 91.43%;
+    padding-bottom: 67.3%;
+    margin: 0 -30px 0 0; }
+  .contacts__address_list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .contacts__address_item {
+    margin-right: 30px;
+    margin-bottom: 15px; } }
 
 .specific_service__slider {
   background-color: #F5F1E9; }
