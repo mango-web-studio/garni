@@ -17,6 +17,15 @@ $(document).ready(function() {
         }
     });
 
+    // Menu button (mobile)
+    if ($('.menu_btn').length) {
+        
+        $('.menu_btn').click(function() {
+            $('#menu').toggleClass('menu--open')
+            $('body').toggleClass('overflow')
+        })
+    }
+
     // Accordion module
     if ($('#accordion').length) {
 

@@ -92,14 +92,18 @@
 @include respond-to(mobile) {
 
     .header {
-        min-height: 80px;
-        padding: 20px 30px;
+        padding: 30px;
 
         &__inner {
             padding: 0;
         }
 
         &__logo {
+
+            &_link {
+                width: 27%;
+                max-width: 155px;
+            }
 
             &_mobile_svg {
                 display: block;

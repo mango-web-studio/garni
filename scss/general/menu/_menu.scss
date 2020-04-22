@@ -1,0 +1,139 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    overflow: auto;
+    pointer-events: none;
+    transition: opacity 0.2s;
+
+    &--open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+        width: 100%;
+        background-color: $white_1;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+
+        &_logo {
+            width: 27%;
+            max-width: 155px;
+        }
+
+        &_close {
+            position: relative;
+            width: 15px;
+            height: 15px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                border-bottom: 1px solid $brown_0;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                border-bottom: 1px solid $brown_0;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+
+    &__nav {
+        padding: 0 30px;
+
+        .nav {
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &__item {
+                counter-increment: nav-item;
+                position: relative;
+                padding-top: 27px;
+                margin-top: 15px;
+                margin-right: 0;
+                text-align: center;
+
+                &::before {
+                    @include font(14px, 17px, "MinionPro-Regular");
+
+                    content: "0" counter(nav-item);
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: $brown_0;
+                }
+            }
+
+            &__link {
+                @include font(36px, 43px, "MinionPro-Regular");
+
+                color: $brown_0;
+            }
+        }
+    }
+
+    &__footer {
+        padding: 0 30px;
+        margin: 70px 0;
+    }
+
+    &__social {
+
+        &_list {
+            display: flex;
+            justify-content: center;
+        }
+
+        &_item {
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &_link {
+            display: block;
+        }
+
+        &_icon {
+            display: block;
+            fill: $brown_0;
+
+            &--facebook {
+                width: 16px;
+            }
+
+            &--instagram {
+                width: 8px;
+            }
+        }
+    }
+}

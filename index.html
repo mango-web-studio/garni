@@ -39,31 +39,74 @@
 	</div>
 	<!-- MENU -->
 	<div class="menu" id="menu">
-		<!-- NAV -->
-		<!-- <nav class="nav" id="nav">
-			<ul class="nav__list">
-				<li class="nav__item">
-					<a class="nav__link" href="services.html">
-						Послуги
-					</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" href="salt_room.html">
-						Соляна кімната
-					</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" href="about.html">
-						Про нас
-					</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" href="contacts.html">
-						Контакти
-					</a>
-				</li>
-			</ul>
-		</nav> -->
+		<div class="menu__inner">
+			<!-- Menu header -->
+			<div class="menu__header">
+				<a href="index.html" class="menu__header_logo">
+					<svg class="menu__header_svg" width="85" height="20" viewBox="0 0 85 20" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16.1697 1.86441L16.9833 0H17.2206V6.88136H17.0172C16.3392 3.32203 14.4748 1.08475 10.3052 1.08475H9.83066C5.25432 1.08475 3.01699 4.94915 3.01699 10.4068C3.01699 15.8644 4.91533 19.6949 9.49167 19.6949C12.068 19.6949 15.4918 18.7797 15.6613 13.8983V10.9831H10.5764V10.6441H18.102V20H17.8308L15.6613 16.0678C14.8138 19.5254 11.6612 20 9.76286 20C4.67804 20 0 15.9322 0 10.3729C0 4.81356 4.77973 0.779661 9.86456 0.779661H10.3391C12.1697 0.779661 14.6782 1.28814 16.1697 1.86441Z" />
+						<path d="M20.3394 19.6272V19.2882H22.2716L28.0344 1.15259L34.6447 19.2882H36.2379V19.6272H30.8141V19.2882H32.3056L30.848 15.2543C29.2208 13.2204 25.6276 13.0509 24.6784 12.9831L22.7123 19.2882H24.6784V19.6272H20.3394ZM24.7462 12.7119C25.6954 12.7797 28.9497 12.9831 30.6107 14.6441L27.153 5.08479L24.7462 12.7119Z" />
+						<path d="M38.2378 19.6272V19.2882H40.5429V1.49157H38.2378V1.15259H46.4413C50.577 1.15259 53.6957 2.54242 53.6957 5.66106C53.6957 8.33903 51.3227 9.76276 48.0685 10.1017L54.9499 19.2882H57.2211V19.6272H52.2041V19.5594L45.2548 10.1695H42.9497V19.2882H45.7633V19.6272H38.2378ZM50.7465 5.66106C50.7465 2.30513 49.0515 1.49157 46.0006 1.49157H42.9836V9.83055H46.0006C49.0515 9.83055 50.7465 8.9492 50.7465 5.66106Z" />
+						<path d="M63.0517 19.6272H58.7126V19.2882H60.7466V1.49157H58.7126V1.15259H63.628L73.1535 15.2882V1.49157H71.1196V1.15259H75.4587V1.49157H73.4925V19.6272H73.1535L61.0856 1.72886V19.2882H63.0517V19.6272Z" />
+						<path d="M77.1538 19.6272V19.2882H79.4589V1.49157H77.1538V1.15259H84.2047V1.49157H81.8996V19.2543H84.2047V19.5933H77.1538V19.6272Z" />
+					</svg>
+				</a>
+				<div class="menu__header_close menu_btn"></div>
+			</div>
+			<!-- Menu nav -->
+			<div class="menu__nav">
+				<!-- NAV -->
+				<nav class="nav" id="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="nav__link" href="services.html">
+								Послуги
+							</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="salt_room.html">
+								Соляна кімната
+							</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="about.html">
+								Про нас
+							</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="contacts.html">
+								Контакти
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- Menu social -->
+			<div class="menu__footer">
+				<div class="menu__social">
+					<ul class="menu__social_list">
+						<li class="menu__social_item">
+							<a href="#" class="menu__social_link">
+								<i class="menu__social_icon menu__social_icon--facebook">
+									<svg class="menu__social_svg" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H12C14.7614 0 17 2.23858 17 5V11C17 13.7614 14.7614 16 12 16H5C2.23858 16 0 13.7614 0 11V5ZM8.55005 10.7C9.90315 10.7 11 9.6031 11 8.25C11 6.8969 9.90315 5.8 8.55005 5.8C7.19695 5.8 6.10005 6.8969 6.10005 8.25C6.10005 9.6031 7.19695 10.7 8.55005 10.7ZM8.55005 12.5C10.8973 12.5 12.8 10.5972 12.8 8.25C12.8 5.90279 10.8973 4 8.55005 4C6.20284 4 4.30005 5.90279 4.30005 8.25C4.30005 10.5972 6.20284 12.5 8.55005 12.5ZM13 4.5C13.5523 4.5 14 4.05228 14 3.5C14 2.94772 13.5523 2.5 13 2.5C12.4477 2.5 12 2.94772 12 3.5C12 4.05228 12.4477 4.5 13 4.5Z" />
+									</svg>
+								</i>
+							</a>
+						</li>
+						<li class="menu__social_item">
+							<a href="#" class="menu__social_link">
+								<i class="menu__social_icon menu__social_icon--instagram">
+									<svg class="menu__social_svg" width="9" height="16" viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.68252 0.00324454L6.66036 0C4.38853 0 2.92037 1.50628 2.92037 3.83765V5.60706H0.887179C0.711487 5.60706 0.569214 5.7495 0.569214 5.92519V8.48886C0.569214 8.66456 0.71165 8.80683 0.887179 8.80683H2.92037V15.2758C2.92037 15.4515 3.06265 15.5938 3.23834 15.5938H5.89108C6.06677 15.5938 6.20904 15.4513 6.20904 15.2758V8.80683H8.58632C8.76201 8.80683 8.90429 8.66456 8.90429 8.48886L8.90526 5.92519C8.90526 5.84083 8.87168 5.76004 8.81214 5.70034C8.7526 5.64064 8.67149 5.60706 8.58713 5.60706H6.20904V4.10711C6.20904 3.38617 6.38084 3.02018 7.31998 3.02018L8.6822 3.0197C8.85773 3.0197 9 2.87726 9 2.70173V0.32121C9 0.145842 8.85789 0.003569 8.68252 0.00324454Z" />
+									</svg>
+								</i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- HEADER -->
 	<header class="header" id="header">
@@ -144,7 +187,7 @@
 				</ul>
 			</div>
 			<!-- Menu button -->
-			<div class="header__menu_btn">
+			<div class="header__menu_btn menu_btn">
 				<svg class="header__menu_btn_svg" width="30" height="16" viewBox="0 0 30 16" xmlns="http://www.w3.org/2000/svg">
 					<rect width="30" height="1.5" />
 					<rect y="7" width="30" height="1.5" />

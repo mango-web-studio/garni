@@ -20,6 +20,10 @@ body {
 	&::-webkit-scrollbar {
 		display: none;
 	}
+
+	&.overflow {
+		overflow: hidden;
+	}
 }
 
 ul, li {
