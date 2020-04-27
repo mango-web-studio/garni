@@ -658,6 +658,7 @@ textarea {
     border: 1px solid #382E2B;
     border-radius: 100px;
     color: #382E2B;
+    background-color: transparent;
     -webkit-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
     transition: background-color 0.2s, color 0.2s;
