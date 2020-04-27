@@ -2434,6 +2434,11 @@ textarea {
       -webkit-align-self: flex-end;
           -ms-flex-item-align: end;
               align-self: flex-end; }
+      .specific_service__slider_inner .slider__photo--small {
+        width: 55.54%;
+        padding-bottom: 51.28%;
+        margin-top: 16.58%;
+        z-index: -1; }
   .specific_service__slider_arrows {
     position: absolute;
     left: -17%;
@@ -2467,6 +2472,10 @@ textarea {
     .specific_service__slider_inner .slider {
       width: 100%;
       margin-bottom: 80px; }
+      .specific_service__slider_inner .slider__photo--small {
+        width: 63.81%;
+        padding-bottom: 42.54%;
+        margin-top: 0; }
   .specific_service__slider_arrows {
     display: none; } }
 
